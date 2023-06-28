@@ -1,0 +1,156 @@
+body{
+    background-color: greenyellow;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .menu-toggle {
+    display: none;
+    cursor: pointer;
+  }
+  
+  .menu-toggle span {
+    display: block;
+    width: 30px;
+    height: 5px;
+    margin-bottom: 5px;
+    background-color: #fff;
+  }
+  
+  .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navigation li {
+    list-style: none;
+  }
+  
+  .navigation li a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+    .navigation {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #333;
+      padding: 10px 0;
+    }
+    .navigation li {
+      margin: 10px 0;
+    }
+    .navigation li a {
+      padding: 0;
+    }
+    input:checked ~ .navigation {
+      display: flex;
+    }
+  }
+
+.card{
+    list-style: none;
+    padding: 40px;
+    background-color: rgba(0,0,0,0.15);
+    color: #fff;
+    text-align: center;
+    border-radius: 25px
+    
+
+}
+
+.card:hover{
+    animation: bounce 0.5s linear;
+}
+
+@keyframes bounce {
+    20%{
+        transform: translateY(-6px);
+    }
+    40%{
+        transform: translateY(0px);
+
+    }
+    60%{
+        transform: translateY(-3px);
+    }
+    80%{
+        transform: translateY(-0px);
+    }
+    
+}
+
+.card-title{
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight:normal;
+    margin-bottom: 0;
+}
+
+.card-subtitle{
+    font-weight: lighter;
+    color: #fff;
+    margin-top: 5px;
+}
+.card-image{
+    height: 180px;
+}
+
+.container{
+    padding: 40px;
+    margin: 0 auto;
+}
+
+img{
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.5));
+}
+h1{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 54px;
+}
+
+#pokedex{
+    padding-inline-start: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 20px;
+}
+
+.center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
